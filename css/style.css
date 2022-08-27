@@ -9,6 +9,10 @@
     font-size: 1.2rem;
     line-height: 1.2;
   }
+  #header .header-content .openMenu,
+  #header .header-content .hamMenu{
+    display: none;
+  }
   .container{
     max-width: 1100px;
     margin: auto;
@@ -435,6 +439,51 @@
   
     
   @media(max-width: 950px){
+    #header .header-content{
+        align-items: center;
+        justify-content: space-between;
+        height: 2.5rem;
+    }
+
+    #header .header-content .navbar{
+        display: none;
+    }
+    #header .header-content .openMenu,
+    #header .header-content .hamMenu{
+        display: flex;
+    }
+    #header .header-content .hamMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+    #header .header-content .hamMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    #header .header-content .openMenu{
+        display: block;
+        color: aquamarine;
+    }
+    #header .header-content .closeMenu i{
+        color: aquamarine;
+    }
+    #header .header-content .hamMenu li a:hover{
+        background: none;
+        color: aquamarine;
+        font-size: 1.5rem;
+    }
    
     #landing .landing-content h1{
     font-size: 4rem;
@@ -442,19 +491,6 @@
         #landing .landing-content p{
             font-size: 1rem;
         }
-   #main-nav .nav-info ul {
-      justify-content:center;
-      margin:10px 0 10px 0;
-      padding: 0;
-    }
-    #main-nav .nav-info ul li{
-      padding: 0;
-    }
-   
-  
-    #main-nav .nav-info .road-ass{
-      display:none;
-    } 
     
     #showcase .row{
       display: flex;
